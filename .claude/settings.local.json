@@ -1,0 +1,5 @@
+{
+  "enabledMcpjsonServers": [
+    "kcp-memory"
+  ]
+}

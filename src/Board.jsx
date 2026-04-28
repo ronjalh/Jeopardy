@@ -2,7 +2,7 @@ import questionsData from './questions.json';
 //import { useState } from 'react';
 
 
-function Board() {
+function Board({ onSelectCard }) {
     const { categories } = questionsData;
 
     return (
@@ -14,6 +14,7 @@ function Board() {
                         <button
                             key={questionIndex}
                             className="board-cell board-cell--available"
+                            onClick={() => onSelectCard(categoryIndex, questionIndex, question.value)}
                         >
                             ${question.value}
                         </button>
