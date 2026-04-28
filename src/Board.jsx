@@ -1,14 +1,23 @@
 import questionsData from './questions.json';
-// questionsData.categories er nå en liste med alle kategoriene
-
 
 function Board() {
+    const { categories } = questionsData;
 
     return (
-        <div classname="board">
-        {questionsData.categories.map((category, index) => (
-            <div key={index}>{category.name}</div>
-        ))}
+        <div className="board">
+            {categories.map((category, categoryIndex) => (
+                <div key={categoryIndex} className="board-column">
+                    <div className="board-category">{category.name}</div>
+                    {category.questions.map((question, questionIndex) => (
+                        <button
+                            key={questionIndex}
+                            className="board-cell board-cell--available"
+                        >
+                            ${question.value}
+                        </button>
+                    ))}
+                </div>
+            ))}
         </div>
     );
 }
