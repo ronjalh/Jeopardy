@@ -3,7 +3,14 @@ import questionsData from './questions.json';
 
 
 function Board() {
-    return <div>Hei, jeg er brettet!</div>;
+
+    return (
+        <div classname="board">
+        {questionsData.categories.map((category, index) => (
+            <div key={index}>{category.name}</div>
+        ))}
+        </div>
+    );
 }
 
 export default Board;
