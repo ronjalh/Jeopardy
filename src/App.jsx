@@ -1,14 +1,16 @@
 import "./App.css";
 import Board from "./Board";
+import { useState } from 'react';
 
 function App() {
-  return (
-    <div className="card">
-      <h1>Velkommen! 👋</h1>
-      <Board></Board>
-    </div>
-    
-  );
+    const [activeCard, setActiveCard] = useState(null);
+
+    return (
+        <div className="game-screen">
+            <h1 className="game-title">🎯 Jeopardy</h1>
+            <Board />
+        </div>
+    );
 }
 
 export default App;

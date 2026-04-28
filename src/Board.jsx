@@ -1,4 +1,6 @@
 import questionsData from './questions.json';
+//import { useState } from 'react';
+
 
 function Board() {
     const { categories } = questionsData;

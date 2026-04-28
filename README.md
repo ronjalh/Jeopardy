@@ -25,4 +25,8 @@ npm install
 
 # Kjør appen lokalt for utvikling
 npm run dev
+
+
+https://github.com/bekk/jeopardy-workshop
+
 ```
